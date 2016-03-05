@@ -8,7 +8,7 @@ while true
   if star != ''
     `date >> stargazer.log`
     `echo "#{ip}" >> stargazer.log`
-    `echo nslookup #{ip} >> stargazer.log`
+    `nslookup #{ip} >> stargazer.log`
     `curl -I #{ip} --anyauth --connect-timeout 0.1 --max-time 3 >> stargazer.log`
   end
   #pattern match for other protocols and version numbers here would be great, I just suck at regex:
